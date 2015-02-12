@@ -1,6 +1,8 @@
 # == Class: kvm-host
 #
 # Full description of class kvm-host here.
+# See also http://www.server-world.info/en/note?os=Fedora_20&p=kvm
+#   https://cloudstack.apache.org/docs/en-US/Apache_CloudStack/4.0.2/html/Installation_Guide/hypervisor-kvm-install-flow.html
 #
 # === Parameters
 #
@@ -37,5 +39,16 @@
 #
 class kvm-host {
 
+# The 'acpi=ht' has to be set in the /boot/grub/grub.cfg
 
+package { 'qemu-kvm': ensure => present }
+package { 'libvirt': ensure => present }
+package { 'virt-install': ensure => present }
+package { 'bridge-utils': ensure => present }
+
+service { 'libvirtd':
+  ensure => running,
+  enable => true,
+  require => Package [ 'libvirt' ],
+}
 }
