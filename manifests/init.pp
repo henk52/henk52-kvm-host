@@ -46,6 +46,31 @@ package { 'libvirt': ensure => present }
 package { 'virt-install': ensure => present }
 package { 'bridge-utils': ensure => present }
 
+package { 'virt-top': ensure => present }
+
+# Agent for reporting virtual guest IDs to subscription-manager
+package { 'virt-who': ensure => present }
+
+# Print kernel messages from a Linux virtual machine.
+package { 'virt-dmesg': ensure => present }
+
+# Graphical Virtual Machine Manager
+package { 'virt-manager': ensure => present }
+
+# Graphical read-only Virtual Machine Viewer
+package { 'virt-viewer': ensure => present }
+
+# Performance monitoring for the Linux kernel
+package { 'perf': ensure => present }
+
+
+# This package contains some diagnostics and debugging tools for KVM
+package { 'qemu-kvm-tools': ensure => present }
+
+
+# https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Virtualization_for_Servers/2.2/html/Administration_Guide/virt-v2v-scripts.html
+#  virt-v2v
+
 service { 'libvirtd':
   ensure => running,
   enable => true,
