@@ -40,6 +40,7 @@
 class kvm-host {
 
 # The 'acpi=ht' has to be set in the /boot/grub/grub.cfg
+#class { '::hyperctl': state => 'enable' }
 
 package { 'qemu-kvm': ensure => present }
 package { 'libvirt': ensure => present }
