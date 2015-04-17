@@ -64,6 +64,9 @@ package { 'bridge-utils': ensure => present }
 
 package { 'virt-top': ensure => present }
 
+# tools for manipulating the content of a machines storage.
+package { 'libguestfs-tools': ensure => present }
+
 # Agent for reporting virtual guest IDs to subscription-manager
 package { 'virt-who': ensure => present }
 
