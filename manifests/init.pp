@@ -43,7 +43,8 @@ class kvm-host {
 
 package { 'qemu-kvm': ensure => present }
 package { 'libvirt': ensure => present }
-package { 'virt-install': ensure => present }
+# TODO make this dependent on OS, fedora=yes/centos-6=no
+#package { 'virt-install': ensure => present }
 package { 'bridge-utils': ensure => present }
 
 package { 'virt-top': ensure => present }
@@ -52,10 +53,12 @@ package { 'virt-top': ensure => present }
 package { 'libguestfs-tools': ensure => present }
 
 # Agent for reporting virtual guest IDs to subscription-manager
-package { 'virt-who': ensure => present }
+# TODO make this dependent on OS, fedora=yes/centos-6=no
+#package { 'virt-who': ensure => present }
 
 # Print kernel messages from a Linux virtual machine.
-package { 'virt-dmesg': ensure => present }
+# TODO make this dependent on OS, fedora=yes/centos-6=no
+#package { 'virt-dmesg': ensure => present }
 
 # Graphical Virtual Machine Manager
 package { 'virt-manager': ensure => present }
