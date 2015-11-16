@@ -44,7 +44,7 @@ class kvm-host {
 package { 'qemu-kvm': ensure => present }
 package { 'libvirt': ensure => present }
 # TODO make this dependent on OS, fedora=yes/centos-6=no
-#package { 'virt-install': ensure => present }
+package { 'virt-install': ensure => present }
 package { 'bridge-utils': ensure => present }
 
 package { 'virt-top': ensure => present }
