@@ -1,4 +1,4 @@
-# == Class: kvm-host
+# == Class: kvm_host
 #
 # Full description of class kvm-host here.
 # See also http://www.server-world.info/en/note?os=Fedora_20&p=kvm
@@ -37,7 +37,7 @@
 #
 # Copyright 2015 Your name here, unless otherwise noted.
 #
-class kvm-host {
+class kvm_host {
 
 
 
@@ -80,7 +80,7 @@ package { 'qemu-kvm-tools': ensure => present }
 service { 'libvirtd':
   ensure => running,
   enable => true,
-  require => Package [ 'libvirt' ],
+  require => Package[ 'libvirt' ],
 }
 
 }
