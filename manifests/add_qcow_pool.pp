@@ -23,7 +23,7 @@ mount { '/virt_images':
         options => 'defaults',
         atboot  => true,
         require => [
-               File ['/virt_images' ],
+               File['/virt_images' ],
                Filesystem['/dev/vg_images/virt_images'],
              ],
 
@@ -40,7 +40,7 @@ libvirt_pool { 'qcows':
   autostart  => true,
   target     => '/virt_images',
   require    => [ 
-                  Service [ 'libvirtd' ],
+                  Service[ 'libvirtd' ],
                   Mount['/virt_images'],
                 ]
 }
