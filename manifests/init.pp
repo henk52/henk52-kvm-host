@@ -1,4 +1,4 @@
-# == Class: kvm-host
+# == Class: kvm_host
 #
 # Full description of class kvm-host here.
 # See also http://www.server-world.info/en/note?os=Fedora_20&p=kvm
